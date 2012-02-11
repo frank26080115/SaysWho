@@ -38,5 +38,17 @@ namespace SaysWho
 
             return nameValueCollection;
         }
+
+        private static Random random;
+        public static Random Rng
+        {
+            get
+            {
+                if (random == null)
+                    random = new Random();
+
+                return random;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Shapes;
 
 namespace SaysWho
 {
-    public class Facebook
+    public class FacebookInfo
     {
         public const string CLIENT_ID = "259515254122270";
         public const string CLIENT_SECRET = "4f018cd58f72f1cc30f2e732861fe9fc";
