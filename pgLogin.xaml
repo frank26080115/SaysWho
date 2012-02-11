@@ -10,6 +10,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
@@ -28,7 +29,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:WebBrowser x:Name="brwFacebookLogin" IsScriptEnabled="True" Loaded="brwFacebookLogin_Loaded" LoadCompleted="brwFacebookLogin_LoadCompleted" />
+            <phone:WebBrowser x:Name="brwFacebookLogin" IsScriptEnabled="True" Loaded="brwFacebookLogin_Loaded" LoadCompleted="brwFacebookLogin_LoadCompleted" Navigating="brwFacebookLogin_Navigating" />
+            <toolkit:PerformanceProgressBar x:Name="progbarPleaseWait"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" Name="txtMessage" Text="" VerticalAlignment="Top" />
         </Grid>
     </Grid>

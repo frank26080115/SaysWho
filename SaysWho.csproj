@@ -53,6 +53,9 @@
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\..\..\..\Documents\Projects\Visual Studio\SaysWho\SaysWho\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="System.Servicemodel" />
     <Reference Include="System.Servicemodel.Web" />

@@ -39,6 +39,10 @@ namespace SaysWho
         {
             try
             {
+                while (questions.Count < PREFETCH_UP_TO)
+                {
+                    
+                }
             }
             catch (ThreadAbortException ex)
             {
