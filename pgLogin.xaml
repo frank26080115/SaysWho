@@ -29,6 +29,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <phone:WebBrowser x:Name="brwFacebookLogin" IsScriptEnabled="True" Loaded="brwFacebookLogin_Loaded" LoadCompleted="brwFacebookLogin_LoadCompleted" />
+            <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" Name="txtMessage" Text="" VerticalAlignment="Top" />
         </Grid>
     </Grid>
  

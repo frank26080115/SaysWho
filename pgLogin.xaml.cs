@@ -36,6 +36,8 @@ namespace SaysWho
                     {
                         if (kvp.Key.ToLowerInvariant() == "code")
                         {
+                            brwFacebookLogin.Visibility = Visibility.Collapsed;
+                            txtMessage.Text = "Please Wait...";
                             WebClient wc = new WebClient();
                             wc.DownloadStringCompleted += new DownloadStringCompletedEventHandler(wc_DownloadStringCompleted);
                             wc.DownloadStringAsync(new Uri(string.Format("https://graph.facebook.com/oauth/access_token?client_id={0}&redirect_uri=http://www.facebook.com/connect/login_success.html&client_secret={1}&code={2}",
@@ -46,11 +48,6 @@ namespace SaysWho
                             success = true;
                         }
                     }
-                }
-
-                if (success == false)
-                {
-                    throw new Exception("Authentication failed to get \"code\" from query.");
                 }
             }
             catch (Exception ex)
@@ -83,7 +80,7 @@ namespace SaysWho
                             success = true;
 
                             // do shit here because we are in
-
+                            txtMessage.Text = Facebook.AccessToken;
 
                             break;
                         }
@@ -114,6 +111,8 @@ namespace SaysWho
         private void BrowseToLoginPage()
         {
             Facebook.AccessToken = null; // effectively log out (sort of)
+
+            brwFacebookLogin.Visibility = Visibility.Visible;
 
             brwFacebookLogin.Navigate(new Uri(string.Format(
                 "https://www.facebook.com/dialog/oauth?client_id={0}&redirect_uri=http://www.facebook.com/connect/login_success.html&client_secret={1}&display=touch",
